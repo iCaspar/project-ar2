@@ -379,7 +379,7 @@ function ar2_theme_options_enqueue_scripts( $hook_suffix ) {
 	wp_enqueue_script( 'jquery-tokeninput', get_template_directory_uri() . '/js/jquery.tokeninput.min.js', array( 'jquery' ), '2012-08-09' );
 	wp_enqueue_script( 'ar2-theme-options', get_template_directory_uri() . '/js/theme-options.js', array( 'jquery', 'jquery-ui-core', 'jquery-ui-tabs' ), '2012-08-09' );
 	
-	wp_localize_script( 'ar2-theme-options', 'ar2Admin_l10n', ar2_theme_options_localize_vars() );
+	wp_localize_script( 'jquery-tokeninput', 'ar2Admin_l10n', ar2_theme_options_localize_vars() );
 	
 }
 add_action( 'admin_print_styles-appearance_page_theme_options', 'ar2_theme_options_enqueue_scripts' );
